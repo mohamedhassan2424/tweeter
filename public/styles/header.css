@@ -1,0 +1,18 @@
+header.navbarheader{
+    width:100vw;
+    background-image: url(../images/45-degree-fabric-dark.png);
+    color:white;
+    padding-top:120px;
+    text-align: center;
+}
+
+.profile-image{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-menu{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

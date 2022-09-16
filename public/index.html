@@ -6,24 +6,77 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
-
+    
+    <!--Font Awsome Libary-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Font Input-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-
+    <!--Linking nav.css file-->
+    <link rel="stylesheet" href="./styles/nav.css"/>
+    <!--Linking header.css file-->
+    <link rel="stylesheet" href="./styles/header.css"/>
+    <!-- new-tweet.css Stylesheet-->
+    <link rel="stylesheet" href="./styles/new-tweet.css"/>
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!--Time Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script>
+      $("body").empty();
+    </script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav class="navbar">
+      <span class="navbar-logo">tweeter</span>
+      
+      <div class="navbar-menu">
+        <p><strong>Write</strong> a new tweet</p>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
     </nav>
+    <header class="navbarheader">
+      <div class="profile-image">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <span class="text-menu"><strong>Mohamed</strong>&nbspHassan</span>
+      </div>
+  </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <p class="error"><i class="fa-solid fa-triangle-exclamation triangleColor"></i>Too Long. Please respet our arbitary limit of 140 character. #kthxbye<i class="fa-solid fa-triangle-exclamation triangleColor"></i></p>
+      <section class="new-tweet">
+        <h2 class="header-element">What are you humming about?</h2>
+        <form class="form-element">
+          <textarea name="text" id="tweet-text" ></textarea>
+          <p class="messagesOutput"></p>
+          
+          <div>
+            <button class= "button-input" type="submit">Tweet</button>
+            <output name="counter" class="counter counterChangeColor" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section class="tweet-container">
+    
+        <article class="articleSection">
+         <header class="header"><span class="name">Newton</span><span class="name">@SirIsac</span></header>
+         <div class="content">If I have seen further it is by standing on the shoulders of giants</div>
+          <footer class="footerSection"><div>10 days ago</div><div class="imageChange"><i class="fa-solid fa-flag color" ></i><i class="fa-solid fa-arrows-spin color"></i><i class="fa-solid fa-heart color"></i></div></footer>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
