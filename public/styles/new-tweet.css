@@ -32,6 +32,9 @@ margin-top: 1px;
     line-height: 1;
   }
   
+  .red-element{
+    color:red;
+  }
 
   .subclassParent {
     width:100%;
@@ -46,8 +49,10 @@ margin-top: 1px;
 
   .header{
     display:flex;
-    justify-content: space-between;
+    justify-content:space-between;
   }
+
+ 
   .footerSection{
     width:100%;
     display:flex;
@@ -99,4 +104,11 @@ margin-top: 1px;
   }
   .error{
     display: none;
+  }
+
+  @media only screen and (min-width:1025px){
+    body {
+      display:flex;
+      flex-direction: row;
+    }
   }

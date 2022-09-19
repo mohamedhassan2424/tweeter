@@ -17,8 +17,8 @@ $("document").ready(() => {
     //Creating the basic html structure for the artciel and what will contain it
         let creatingNewArticle = $(`<article class="articleSection">`); 
         let creatingNewHeader= $(`<header class="header">`)
-        let creatingNewName=$(`<span  class="header">`);
-        let creatingNewAvatar=$(`<img class="name">`);
+        let creatingNewName=$(`<span  class="">`);
+        let creatingNewAvatar=$(`<img class="header" src= "${tweets.user.avatars}"></img>`);
         let creatingNewHandler=$(`<span  class="header">`);
         let creatingNewContent=$(`<p class="content">`);
         let creatingNewErrorMessage=$('<p class="error"><i class="fa-solid fa-triangle-exclamation triangleColor"></i>Too long Plz resepect our aribitary limit of 140 chars.#kthxbye<i class="fa-solid fa-triangle-exclamation triangleColor"></i></p>')
@@ -27,15 +27,15 @@ $("document").ready(() => {
         let creatingNewFooter=$(`<footer class="footerSection">`);
         //Creating the basic inseration text for these element
         creatingNewName.text(tweets.user.name)
-        creatingNewAvatar.text(tweets.user.avatars)
         creatingNewHandler.text(tweets.user.handle)
         creatingNewContent.text(tweets.content.text)
         creatingNewTimeElement.text(timeago.format(tweets.created_at))
 
         //appending header
+        creatingNewHeader.append(creatingNewAvatar)
         creatingNewHeader.append(creatingNewName)
         creatingNewHeader.append(creatingNewHandler)
-
+        
         //appending Foorter
         //appending header
         creatingNewFooter.append(creatingNewTimeElement)
@@ -43,7 +43,7 @@ $("document").ready(() => {
 
         //Appeding Element to article
         creatingNewArticle.append(creatingNewHeader)
-        creatingNewArticle.append(creatingNewAvatar)
+        //creatingNewArticle.append(creatingNewAvatar)
         //creatingNewArticle.append(creatingNewHandler)
         creatingNewArticle.append(creatingNewContent)
         //creatingNewArticle.append(creatingNewSymbol)
@@ -120,7 +120,12 @@ $("document").ready(() => {
     const counter= $('.counter')
     const messagesOutput= $('.messagesOutput')
     const textAreaValue= textArea.val()
-
+    const chractersLeft=140-textAreaValue
+   
+    if(chractersLeft<0){
+      console.log(chractersLeft)
+      return counter.addClass('.red-element')
+    }
     if(textAreaValue.trim()==="" || textAreaValue.trim()===null){
        //return messagesOutput.text("Please text something, nothing is being inputed");
       
