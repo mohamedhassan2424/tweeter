@@ -15,7 +15,7 @@ $("document").ready(() => {
 
   const createTweetElement = function (tweets) {
     //Creating the basic html structure for the artciel and what will contain it
-        let creatingNewArticle = $(`<article class="articleSection">`); 
+        /*let creatingNewArticle = $(`<article class="articleSection">`); 
         let creatingNewHeader= $(`<header class="header">`)
         let creatingNewName=$(`<span  class="">`);
         let creatingNewAvatar=$(`<img class="header" src= "${tweets.user.avatars}"></img>`);
@@ -47,12 +47,29 @@ $("document").ready(() => {
         //creatingNewArticle.append(creatingNewHandler)
         creatingNewArticle.append(creatingNewContent)
         //creatingNewArticle.append(creatingNewSymbol)
-        creatingNewArticle.append(creatingNewFooter)
-        /*if(!boobelanValue){
-            creatingNewArticle.append(creatingNewErrorMessage)
-        }*/
+        creatingNewArticle.append(creatingNewFooter)*/
+        let creatingNewArticle = $("<article class= articleSection>")
+        let contentFlow = `
+       <header>
+       <div>
+       <span><img src=${tweets.user.avatars}</span>
+       <span><h3>${tweets.user.name}></h3></span>
+       <span><h3>${tweets.user.handle}</h3></span>
+       </div>
+       </header>
+       <div>
+       <p>${tweets.content.text}</p>
+       </div>
+       <footer>
+       <span><h5>${timeago.format(tweets.created_at)}</h5></span>
+       <span>
+       <i class="fa-solid fa-flag color" ></i>
+       <i class="fa-solid fa-arrows-spin color"></i>
+       <i class="fa-solid fa-heart color"></i>
+       </span>
+       </footer>`;
     
-        creatingNewArticle.append(creatingNewFooter)
+        creatingNewArticle.append(contentFlow)
     return creatingNewArticle;
     //return $tweet;
   };
