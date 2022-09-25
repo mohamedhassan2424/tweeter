@@ -56,17 +56,19 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p class="error"><i class="fa-solid fa-triangle-exclamation triangleColor"></i>Too Long. Please respet our arbitary limit of 140 character. #kthxbye<i class="fa-solid fa-triangle-exclamation triangleColor"></i></p>
+      <!--<p class="error"><i class="fa-solid fa-triangle-exclamation triangleColor"></i>Too Long. Please respet our arbitary limit of 140 character. #kthxbye<i class="fa-solid fa-triangle-exclamation triangleColor"></i></p>-->
       <section class="new-tweet">
         <!--<h2 class="header-element">What are you humming about?</h2>-->
-        <textarea name="textarea">What are you humming about?</textarea>
-        <form class="form-element">
+        <form method ="POST" action="/tweets"class="tweeter-form"></form>
+        <textarea  class= "textareaclass" name="textarea"placeholder = "What are you humming about?"></textarea>
           <!--<textarea name="text" id="tweet-text" ></textarea>-->
           <p class="messagesOutput"></p>
           
           <div>
-            <button class= "button-input" type="submit">Tweet</button>
-            <output name="counter" class="counter counterChangeColor" for="tweet-text">140</output>
+            <button class="button-input" type="submit">Tweet</button>
+            <!--class="counter counterChangeColor"-->
+            <output class="counter"  for="tweet-text">140</output>
+            <!--ounterChangeColor-->
           </div>
         </form>
       </section>

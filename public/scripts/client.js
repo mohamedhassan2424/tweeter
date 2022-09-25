@@ -135,7 +135,6 @@ $("document").ready(() => {
     event.preventDefault();
     const textArea= $('textarea')
     const counter= $('.counter')
-    const messagesOutput= $('.messagesOutput')
     const textAreaValue= textArea.val()
     const chractersLeft=140-textAreaValue
    

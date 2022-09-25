@@ -1,7 +1,7 @@
 $(document).ready(function(event) {
     // --- our code goes here ---
-    //console.log("Hello World")
-    $("#tweet-text").on('keypress', (event) =>{
+    //console.log("Hello World #tweet-text")
+    $(".textareaclass").on('keypress', (event) =>{
         //console.log("HelloWorld")
         const newTweet = event.target.value.length
         const newValue =140 - newTweet

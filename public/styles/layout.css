@@ -24,6 +24,7 @@ body {
 main{
     width:90vw;
     margin:auto;
+    position:relative;
 }
 
 
