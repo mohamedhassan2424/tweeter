@@ -69,12 +69,14 @@ $("document").ready(function () {
        <p>${tweets.content.text}</p>
        </div>
        <footer>
-       <span><h5>${timeago.format(tweets.created_at)}</h5></span>
-       <span>
+       <div class="footerValue">
+       <div><h5>${timeago.format(tweets.created_at)}</h5></div>
+       <div class="mainColorBlue">
        <i class="fa-solid fa-flag" ></i>
        <i class="fa-solid fa-arrows-spin"></i>
        <i class="fa-solid fa-heart"></i>
-       </span>
+       </div>
+       </div>
        </footer>
        </article>`;
 
