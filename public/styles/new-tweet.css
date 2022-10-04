@@ -139,8 +139,16 @@ margin-top: 1px;
 
 .tweetComponents {
   display:flex;
-  justify-content:space-between;
-  
+  justify-content: space-between;
+  align-items: center;
+}
+.itemValue {
+  display:flex;
+
+  align-items: center;
+}
+.itemValue img {
+  margin-right: 0.4em;
 }
 
 /*@media only screen and (min-width:1025px){
@@ -149,6 +157,10 @@ margin-top: 1px;
     flex-direction: row;
   }
 }*/
+
+.contentTweet {
+  border-bottom: black 5px solid;
+}
 
 .articleSection:hover {
   box-shadow: 10px 10px;

@@ -56,12 +56,16 @@ $("document").ready(function () {
         <article class= "articleSection">
        <header>
        <div class="tweetComponents">
-       <span><img src="${tweets.user.avatars}"</span>
-       <span><h3>${tweets.user.name}></h3></span>
-       <span><h3>${tweets.user.handle}</h3></span>
+       <div class="itemValue"><img src="${tweets.user.avatars}">
+       ${tweets.user.name}
        </div>
+        <div class="otherContent">
+       <p>${tweets.user.handle}</p>
+       </div>
+       </div>
+
        </header>
-       <div>
+       <div class="contentTweet">
        <p>${tweets.content.text}</p>
        </div>
        <footer>
