@@ -181,13 +181,13 @@ margin-top: 1px;
 
 @media only screen and (min-width:1024px) {
   header.navbarheader {
-    margin: auto;
+    margin-top:150px;
     margin-left: 50px;
     width:40%;
     height:60%;
   }
   .parentContaierTweet {
-    margin-top:100px;
+    margin-top:200px;
     margin-right:40px;
     display:flex;
     flex-direction: row;
