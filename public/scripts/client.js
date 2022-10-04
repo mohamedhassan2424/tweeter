@@ -14,43 +14,7 @@ $("document").ready(function () {
   };
 
   const createTweetElement = function (tweets) {
-    /*
-  //Creating the basic html structure for the artciel and what will contain it
-      let creatingNewArticle = $(`<article class="articleSection">`); 
-      let creatingNewHeader= $(`<header class="header">`)
-      let creatingNewName=$(`<span  class="header">`);
-      let creatingNewAvatar=$(`<img class="name">`);
-      let creatingNewHandler=$(`<span  class="header">`);
-      let creatingNewContent=$(`<p class="content">`);
-      let creatingNewErrorMessage=$('<p class="error"><i class="fa-solid fa-triangle-exclamation triangleColor"></i>Too long Plz resepect our aribitary limit of 140 chars.#kthxbye<i class="fa-solid fa-triangle-exclamation triangleColor"></i></p>')
-      let creatingNewSymbol=$(`<div><i class="fa-solid fa-flag color" ></i><i class="fa-solid fa-arrows-spin color"></i><i class="fa-solid fa-heart color"></i></div>`);
-      let creatingNewTimeElement=$(`<div>`);
-      let creatingNewFooter=$(`<footer class="footerSection">`);
-      //Creating the basic inseration text for these element
-      creatingNewName.text(tweets.user.name)
-      creatingNewAvatar.text(tweets.user.avatars)
-      creatingNewHandler.text(tweets.user.handle)
-      creatingNewContent.text(tweets.content.text)
-      creatingNewTimeElement.text(timeago.format(tweets.created_at))
-
-      //appending header
-      creatingNewHeader.append(creatingNewName)
-      creatingNewHeader.append(creatingNewHandler)
-
-      //appending Foorter
-      //appending header
-      creatingNewFooter.append(creatingNewTimeElement)
-      creatingNewFooter.append(creatingNewSymbol)
-
-      //Appeding Element to article
-      creatingNewArticle.append(creatingNewHeader)
-      creatingNewArticle.append(creatingNewAvatar)
-      //creatingNewArticle.append(creatingNewHandler)
-      creatingNewArticle.append(creatingNewContent)
-      //creatingNewArticle.append(creatingNewSymbol)
-      creatingNewArticle.append(creatingNewFooter)
-   */
-    // let creatingNewArticle = $("<article class= articleSection>")
+   
 
     let contentFlow = `
         <article class= "articleSection">
@@ -81,56 +45,7 @@ $("document").ready(function () {
        </article>`;
 
     return contentFlow;
-
-    //creatingNewArticle.append(creatingNewFooter)
-    // return creatingNewArticle;
-    //return $tweet;
   };
-
-  /*const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-
-];
-const tweetData = {
-  user: {
-    name: "Newton",
-    avatars: "https://i.imgur.com/73hZDYK.png",
-    handle: "@SirIsaac",
-  },
-  content: {
-    text: "If I have seen further it is by standing on the shoulders of giants",
-  },
-  created_at: 1461116232227,
-};
-*/
-  //const $tweet = createTweetElement(tweetData);
-  //renderTweets(data);
-
-  //console.log(tweetData.user.name)
-  //console.log(createTweetElement())
-  //$(".tweet-container").append($tweet)
-  //console.log("testing", $tweet);
   const loadTweets = function () {
     $.ajax({
       type: "GET",
@@ -177,10 +92,3 @@ const tweetData = {
   });
 });
 
-/*$.ajax({
-      method:'Get'
-  }).then((response) => {
-      let newArticle= createTweetElement(response)
-  
-      $('section').append(createTweetElement(newArticle))
-  })*/
