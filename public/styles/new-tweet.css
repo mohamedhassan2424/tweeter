@@ -110,7 +110,7 @@ margin-top: 1px;
   color:orange;
 }
 
-.error {
+.errorWarning {
   color: #a94442;
   background-color: #f2dede;
   border: 5px solid red;
@@ -122,11 +122,25 @@ margin-top: 1px;
   padding-left: 5px;
   color:red;
 }
-.error{
-  display: none;
-}
+
 .warning-text{
   color:red;
+}
+
+.articleSection {
+  border: 4px solid black;
+  width:100%;
+  height:100%;
+  padding:5px;
+  border-bottom: 5px solid;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.tweetComponents {
+  display:flex;
+  justify-content:space-between;
+  
 }
 
 /*@media only screen and (min-width:1025px){
@@ -135,3 +149,7 @@ margin-top: 1px;
     flex-direction: row;
   }
 }*/
+
+.articleSection:hover {
+  box-shadow: 10px 10px;
+}

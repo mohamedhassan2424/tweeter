@@ -7,8 +7,8 @@
               const newValue =140 - newTweet
               $('.counter').val(newValue)
               console.log(newTweet)
-              console.log(newTweet<0)
-              if(newTweet<0){
+              console.log(newValue<0)
+              if(newValue<0){
                 $('.counter').addClass("warning-text");
               }else{
                 $('.counter').removeClass("warning-text");

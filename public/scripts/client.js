@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $("document").ready(function () {
+  $(".errorWarning").css("display", "none")
   const renderTweets = function (tweet) {
     $(".tweet-container").empty();
     for (let indivdualTweet of tweet) {
@@ -54,7 +55,7 @@ $("document").ready(function () {
     let contentFlow = `
         <article class= "articleSection">
        <header>
-       <div>
+       <div class="tweetComponents">
        <span><img src="${tweets.user.avatars}"</span>
        <span><h3>${tweets.user.name}></h3></span>
        <span><h3>${tweets.user.handle}</h3></span>
@@ -149,7 +150,7 @@ const tweetData = {
   const boobelanValue= textAreaValue.length>140;
   console.log(boobelanValue)
   if(boobelanValue){
-      $(".error").show()
+      $(".errorWarning").show()
       $(".counterChangeColor").show()
       return messagesOutput.text("Your input has excedded input limit of 140");
   }

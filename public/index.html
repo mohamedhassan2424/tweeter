@@ -56,8 +56,12 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <!--<p class="error"><i class="fa-solid fa-triangle-exclamation triangleColor"></i>Too Long. Please respet our arbitary limit of 140 character. #kthxbye<i class="fa-solid fa-triangle-exclamation triangleColor"></i></p>-->
+      <!---->
       <section class="new-tweet">
+        <div class="errorWarning">
+          <i class="fa-solid fa-triangle-exclamation triangleColor"></i>Too Long. Please respet our arbitary limit of 140 character. #kthxbye<i class="fa-solid fa-triangle-exclamation triangleColor"></i>
+        </div>
+       
         <!--<h2 class="header-element">What are you humming about?</h2>-->
         <form class="tweeter-form" action="/tweets" method="POST" >
         <textarea  class= "textareaclass" name="text"placeholder = "What are you humming about?"></textarea>
