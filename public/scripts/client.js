@@ -70,9 +70,15 @@ $("document").ready(function () {
     }
   const boobelanValue= textAreaValue.length>140;
   console.log(boobelanValue)
+  
   if(boobelanValue){
-      $(".errorWarning").show()
-      $(".counterChangeColor").show()
+    $(".errorWarning").show()
+        $(".counterChangeColor").show()
+      setTimeout(()=>{
+        $(".errorWarning").hide()
+        $(".counterChangeColor").hide()
+      },3000)
+
       return messagesOutput.text("Your input has excedded input limit of 140");
   }
     const data = $(this).serialize();
@@ -86,6 +92,8 @@ $("document").ready(function () {
         type: "GET",
         url: "/tweets",
       }).then((data) => {
+        $(".counter").val(140)
+        $(".textareaclass").val("")
         renderTweets(data);
       });
     });
